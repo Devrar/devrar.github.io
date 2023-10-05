@@ -4,15 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Hi! Not too much to say about this for now... I'm Devrar and this is a blog to write down some things I'm studying or I find interesting (mainly about CTFs and chess, but maybe I'll add something else in the future). I will use it more like a personal diary to track what I'm doing, but if anyone wants to talk about some of the arguments feel free to write me on Discord!
