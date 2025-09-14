@@ -1,7 +1,72 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://devrar.github.io/'
+defaultContentLanguage = "en"
+# Automatically generate robots.txt
+enableRobotsTXT = true
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Complexity'
 theme = 'gokarna'
+
+[menu]
+  [[menu.main]]
+    # Display name
+    name = "Posts"
+
+    # Relative URL slug (appended to baseURL)
+    url = "/posts/"
+
+    # Lower weights are listed first in the menu (leftmost); higher weights are
+    # listed last in the menu (rightmost)
+    weight = 1
+
+  [[menu.main]]
+    # Display name
+    identifier = "twitter"
+
+    # Relative URL slug (appended to baseURL)
+    url = "https://x.com/devrar98"
+
+    # Lower weights are listed first in the menu (leftmost); higher weights are
+    # listed last in the menu (rightmost)
+    weight = 3
+
+    pre = "<span data-feather='twitter'></span>"
+    [[menu.main.params]]
+      newPage = true
+
+  [[menu.main]]
+    # Display name
+    identifier = "github"
+
+    # Relative URL slug (appended to baseURL)
+    url = "https://github.com/Devrar"
+
+    # Lower weights are listed first in the menu (leftmost); higher weights are
+    # listed last in the menu (rightmost)
+    weight = 4
+
+    pre = "<span data-feather='github'></span>"
+    [[menu.main.params]]
+      newPage = true
+
+  [[menu.main]]
+    # Display name
+    identifier = "lichess"
+
+    # Relative URL slug (appended to baseURL)
+    url = "https://lichess.org/@/Devrar"
+
+    # Lower weights are listed first in the menu (leftmost); higher weights are
+    # listed last in the menu (rightmost)
+    weight = 5
+
+    pre = "<img class='svg-inject' src='/svg/icons/lichess.svg' />"
+    [[menu.main.params]]
+      newPage = true
+
+
+
+[params]
+  description = "A diary of a journey whose goal is to study and understand the complexity of all the fields that interest me, and to share it with anyone who wants to come along. Or perhaps simply yet another self-deception to convince myself to stay committed. But maybe this time it will work."
 
 [caches]
   [caches.images]
