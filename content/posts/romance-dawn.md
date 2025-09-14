@@ -29,4 +29,4 @@ This is a concept I've steped onto many times recently and in many different are
 
 Well, I guess this is it for now.
 
-To be contintinued.
+To be continued.
