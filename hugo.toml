@@ -67,7 +67,26 @@ theme = 'gokarna'
 
 [params]
   description = "A diary of a journey whose goal is to study and understand the complexity of all the fields that interest me, and to share it with anyone who wants to come along. Or perhaps simply yet another self-deception to convince myself to stay committed. But maybe this time it will work."
+  customHeadHTML = '''
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+  '''
 
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[frontmatter]
+  date = ['publishdate', 'date', 'pubdate', 'published', 'lastmod', 'modified']
+  expiryDate = ['expirydate', 'unpublishdate']
+  lastmod = [':git', 'lastmod', 'modified', 'date', 'publishdate', 'pubdate', 'published']
+  publishDate = ['publishdate', 'pubdate', 'published', 'date']
