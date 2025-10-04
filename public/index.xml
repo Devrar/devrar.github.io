@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Complexity</title>
-    <link>https://devrar.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Complexity</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://devrar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Sep 2025 15:43:29 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Puppet Writeup</title>
+      <link>http://localhost:1313/posts/puppet-witeup/</link>
+      <pubDate>Thu, 25 Sep 2025 15:43:29 +0200</pubDate>
+      <guid>http://localhost:1313/posts/puppet-witeup/</guid>
+      <description>&lt;p&gt;Welcome back! This will be a series of three posts on the Uniswap challenges from &lt;a href=&#34;https://www.damnvulnerabledefi.xyz/&#34;&gt;Damn Vulnerable DeFi&lt;/a&gt;. I&amp;rsquo;ve just finished &lt;a href=&#34;https://www.damnvulnerabledefi.xyz/challenges/puppet-v3/&#34;&gt;Puppet V3&lt;/a&gt; and learned a lot about the protocol, so I thought it would be nice to write down what I understood and see if I can explain it clearly.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;You do not really understand something unless you can explain it to your grandmother.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;— Albert Einstein&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;details class=&#34;spoiler&#34;&gt;&#xA;  &lt;summary&gt;Spoiler&lt;/summary&gt;&#xA;  No, Einstein didn&amp;rsquo;t actually say that.&#xA;&lt;/details&gt;&#xA;&lt;h2 id=&#34;uniswap-very-approximate-overview&#34;&gt;Uniswap (very approximate) overview&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Disclaimer: this is not a real explanation of the protocol. If you want to understand it properly, I suggest reading the &lt;a href=&#34;https://rareskills.io/uniswap-v3-book&#34;&gt;Rare Skills Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Romance Dawn</title>
-      <link>https://devrar.github.io/posts/romance-dawn/</link>
+      <link>http://localhost:1313/posts/romance-dawn/</link>
       <pubDate>Sun, 14 Sep 2025 17:25:19 +0200</pubDate>
-      <guid>https://devrar.github.io/posts/romance-dawn/</guid>
+      <guid>http://localhost:1313/posts/romance-dawn/</guid>
       <description>&lt;p&gt;I hope this title will spark a memory in many of you. The dawn of an adventure is never as poetic as we want it to be: no sea monsters, no soundtrack, no open sea in front of us and no treasure to go for. The only thing that makes it worthwhile is looking back at it at the end of the journey; but for that, we&amp;rsquo;ll have to wait.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -18,26 +18,26 @@
     
 
     
-    <title>Romance Dawn</title>
-    <meta name="description" content="I hope this title will spark a memory in many of you. The dawn of an adventure is never as poetic as we want it to be: no sea monsters, no soundtrack, no open …">
+    <title>Puppet Writeup</title>
+    <meta name="description" content="Welcome back! This will be a series of three posts on the Uniswap challenges from Damn Vulnerable DeFi. I&rsquo;ve just finished Puppet V3 and learned a lot on …">
     <meta name="keywords" content=''>
 
-    <meta property="og:url" content="http://localhost:1313/posts/romance-dawn/">
+    <meta property="og:url" content="http://localhost:1313/posts/puppet-witeup/puppet-writeup/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Romance Dawn">
-    <meta property="og:description" content="I hope this title will spark a memory in many of you. The dawn of an adventure is never as poetic as we want it to be: no sea monsters, no soundtrack, no open …">
+    <meta property="og:title" content="Puppet Writeup">
+    <meta property="og:description" content="Welcome back! This will be a series of three posts on the Uniswap challenges from Damn Vulnerable DeFi. I&rsquo;ve just finished Puppet V3 and learned a lot on …">
     <meta property="og:image" content="http://localhost:1313/">
     <meta property="og:image:secure_url" content="http://localhost:1313/">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Romance Dawn">
-    <meta name="twitter:description" content="I hope this title will spark a memory in many of you. The dawn of an adventure is never as poetic as we want it to be: no sea monsters, no soundtrack, no open …">
-    <meta property="twitter:domain" content="http://localhost:1313/posts/romance-dawn/">
-    <meta property="twitter:url" content="http://localhost:1313/posts/romance-dawn/">
+    <meta name="twitter:title" content="Puppet Writeup">
+    <meta name="twitter:description" content="Welcome back! This will be a series of three posts on the Uniswap challenges from Damn Vulnerable DeFi. I&rsquo;ve just finished Puppet V3 and learned a lot on …">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/puppet-witeup/puppet-writeup/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/puppet-witeup/puppet-writeup/">
     <meta name="twitter:image" content="http://localhost:1313/">
 
     
-    <link rel="canonical" href="http://localhost:1313/posts/romance-dawn/">
+    <link rel="canonical" href="http://localhost:1313/posts/puppet-witeup/puppet-writeup/">
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -147,7 +147,7 @@
 <main id="content">
     <div class="post container">
     <div class="post-header-section">
-        <h1>Romance Dawn</h1>
+        <h1>Puppet Writeup</h1>
 
         
 
@@ -170,7 +170,7 @@
           <p class="post-date">
               
 
-              September 14, 2025
+              September 25, 2025
 
               
           </p>
@@ -182,22 +182,30 @@
     </div>
 
     <div class="post-content">
-        <p>I hope this title will spark a memory in many of you. The dawn of an adventure is never as poetic as we want it to be: no sea monsters, no soundtrack, no open sea in front of us and no treasure to go for. The only thing that makes it worthwhile is looking back at it at the end of the journey; but for that, we&rsquo;ll have to wait.</p>
-<p>Enough of the philosophical talk and let&rsquo;s explain who am I and what is this blog for.</p>
-<h2 id="whoami">whoami</h2>
-<p>I&rsquo;m Devrar and honestly I don&rsquo;t know what much else to say about me, but maybe I can start from what I&rsquo;m interested in.</p>
+        <p>Welcome back! This will be a series of three posts on the Uniswap challenges from <a href="https://www.damnvulnerabledefi.xyz/">Damn Vulnerable DeFi</a>. I&rsquo;ve just finished <a href="https://www.damnvulnerabledefi.xyz/challenges/puppet-v3/">Puppet V3</a> and learned a lot on the protocol, so I thought it would be nice to write down what I&rsquo;ve understood and see if I can explain it in a clear way.</p>
+<blockquote>
+<p>&ldquo;You do not really understand something unless you can explain it to your grandmother.&rdquo;</p>
+<p><em>— Albert Einstein</em></p></blockquote>
+<details class="spoiler">
+  <summary>Spoiler</summary>
+  No, Einstein didn&rsquo;t really say that.
+</details>
+<h2 id="what-is-uniswap">What is Uniswap?</h2>
+<blockquote>
+<p>In 2018, Hayden Adams created the Uniswap Protocol, a decentralized protocol that introduced a new way to exchange value online. By using Automated Market Makers (AMMs), the protocol enabled peer-to-peer trading of digital assets without the need for intermediaries or any central authority.</p></blockquote>
+<p>This or similar is what I found when I searched for an explanation of the protocol. But knowing almost nothing about decentralized finance I had no idea what it meant.</p>
+<p>The meaning is actually simple: Uniswap (in its first version, which will be the focus of this post) allows to create exchanges between any ERC20 token and ETH. And what about the Automated Market Makers? That just means all the exchanges are managed by smart contracts and fully automated (you don&rsquo;t say!) whereas other solutions reckon on order books, which I don&rsquo;t really know how they work, but I imagine something like:</p>
 <ul>
-<li><strong>chess:</strong> one of my goals is to understand as much as possible of the complexity behind chess (and every other board game actually). At the time of writing this, I&rsquo;m in a period of break since I wasn&rsquo;t happy with my approach to the game, but hopefully this blog will help me return to studying and playing competitively.</li>
-<li><strong>cryptography/ctfs:</strong> coming from a bachelor&rsquo;s in maths I discovered cryptography and the world of ctfs. I&rsquo;ve attended a master&rsquo;s in cryptography and now I help organize ctfs and play them with the amazing team <strong>about:blankets</strong>.</li>
-<li><strong>web3:</strong> recently I&rsquo;ve started studying web3 security and found it to be much more interesting and complex than I thought. From the outside, I think most people only see the &ldquo;logical vulnerabilities&rdquo; part and simplify it as if it is just a matter of spotting a missing reentrancy guard. But in reality what developed with the idea of the blockchain is a completely new world with its own rules and its own complexity. I&rsquo;m of course still at the very beginning of this study, but willing to learn more (and looking for my first bounty).</li>
+<li>Alice: &ldquo;Hey! I&rsquo;m selling 1 token for 3 ETH, anybody wants??&rdquo;</li>
+<li>Bob: &ldquo;But that&rsquo;s a scam, I&rsquo;m willing to pay at maximum 2 ETH!&rdquo;</li>
+<li>Charlie: &ldquo;Hey Bob, I&rsquo;m selling for 2 ETH!&rdquo;</li>
+<li><em>Bob and Charlie exchange and are happy, Alice is sad.</em></li>
 </ul>
-<p>There are many more things I would like to explore, but this blog will probably focus on these three, since are the main ones I want to carry on in this period.</p>
-<h2 id="why-this-blog">Why this blog?</h2>
-<p>Lately I&rsquo;ve been struggling to pursue my interests, swinging between highs and lows and not being able to focus on a goal for long enough. This will be my personal diary where I will keep note of what I&rsquo;m doing, what I&rsquo;ve learned and how my journey is going. But then why make it public? I don&rsquo;t know if anyone will ever read this blog, but in case someone does and wants to share some thoughts on a post, discuss about a chess game, a ctf challenge or anything else, feel free to contact me wherever you want.</p>
-<h2 id="why-complexity">Why complexity?</h2>
-<p>This is a concept I&rsquo;ve steped onto many times recently and in many different areas. The more obvious ones are chess and maths, but you can recognize very similar characteristics in the complexity that arises from the interactions of Ethereum contracts, or from the composition of classical music or even from the relationships between people. But what is the definition of complexity? How do we interact with it? Can we study it? These are all questions I would like to answer one day, or at least try to. And I hope to find the answer during this journey.</p>
-<p>Well, I guess this is it for now.</p>
-<p>To be continued.</p>
+<p><strong>Achtung!</strong> This <em>might</em> be an oversemplification of the actual protocol.</p>
+<h2 id="how-it-works">How it works?</h2>
+<p>It is pretty clear why the order book solution works, but how does an automated solution work? How does it determine the right price? How does it change? Where does the liquidity come from? The solution to all these questions lies in the magic Uniswap curve $x \cdot y = k$. Except for the liquidity part, that&rsquo;s just people giving tokens and ETH to the pool to earn on fees, not so magical. But let&rsquo;s focus on the curve.</p>
+<p>Let&rsquo;s take as example an exchange between DVT (Damn Valuable Token, from the Damn Vulnerable DeFi challenges) and ETH. The exchange pool has reserves of both DVT and ETH: when a user wants to exchange DVT for ETH it sends DVT to the pool and the pool sends back ETH. But how much ETH? That&rsquo;s where the curve comes into play.</p>
+<p>Calling $x$ the amount of DVT in the pool and $y$ the amount of ETH, the exchange works on the invariant $k = x\cdot y$. This means that if we want to exchange $\Delta x$ DVT, we will get $\Delta y$ ETH such that $(x + \Delta x)(y - \Delta y) = k$ (not taking fees into account). Visualizing it on the curve it would be something like this:</p>
 
         
     </div>
