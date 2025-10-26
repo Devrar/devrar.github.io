@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+            --font-size: 1.1rem;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Back to Chess</title>
+    <meta name="description" content="Welcome back! I was writing a post on a chess tournament I played around a month ago, but in the end I decided to postpone it and instead focus first on what …">
+    <meta name="keywords" content='chess'>
+
+    <meta property="og:url" content="http://localhost:1313/posts/back-to-chess/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Back to Chess">
+    <meta property="og:description" content="Welcome back! I was writing a post on a chess tournament I played around a month ago, but in the end I decided to postpone it and instead focus first on what …">
+    <meta property="og:image" content="http://localhost:1313/">
+    <meta property="og:image:secure_url" content="http://localhost:1313/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Back to Chess">
+    <meta name="twitter:description" content="Welcome back! I was writing a post on a chess tournament I played around a month ago, but in the end I decided to postpone it and instead focus first on what …">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/back-to-chess/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/back-to-chess/">
+    <meta name="twitter:image" content="http://localhost:1313/">
+
+    
+    <link rel="canonical" href="http://localhost:1313/posts/back-to-chess/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.70293498aa96b2dbb767ec11a622eb2266d8fc37a0fff88233a82952e3c72b15.js" integrity="sha256-cCk0mKqWstu3Z&#43;wRpiLrImbY/Deg//iCM6gpUuPHKxU="></script>
+
+    
+    
+        <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+  
+    
+
+    
+        <link href="https://c2a.chesstempo.com/pgnviewer/v2.5/pgnviewerext.vers1.css" media="all" rel="stylesheet" crossorigin>
+        <script defer language="javascript" src="https://c1a.chesstempo.com/pgnviewer/v2.5/pgnviewerext.bundle.vers1.js" crossorigin></script>
+
+        <link
+        href="https://c1a.chesstempo.com/fonts/MaterialIcons-Regular.woff2"
+        rel="stylesheet" crossorigin>
+        <link href="https://c1a.chesstempo.com/fonts/chessalphanew-webfont.woff" media="all" rel="stylesheet" crossorigin>
+        <script>
+            function goToMove(id, move) {
+                node = document.getElementById(id).getElementsByClassName('ct-move-list-container')[0];
+                node = node.querySelector('[data-move-id="' + move + '"]').getElementsByClassName('ct-move-notation')[0];
+                node.dispatchEvent(new PointerEvent('pointerdown', {bubbles:true, cancelable:true, composed:true}));
+                node.dispatchEvent(new PointerEvent('pointerup', {bubbles:true, cancelable:true, composed:true}));
+                return false;
+            }
+        </script>
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">Complexity</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/posts/" aria-label="" > Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://x.com/devrar98" aria-label="twitter" target="_blank"><span data-feather='twitter'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/Devrar" aria-label="github" target="_blank"><span data-feather='github'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://lichess.org/@/Devrar" aria-label="lichess" target="_blank"><img class='svg-inject' src='/icons/lichess.svg' />  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                <a aria-hidden="true" role="switch">
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a aria-checked="false" aria-labelledby="hamburger-menu-toggle" id="hamburger-menu-toggle-target" role="switch">
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/posts/" > Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://x.com/devrar98" target="_blank"><span data-feather='twitter'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/Devrar" target="_blank"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://lichess.org/@/Devrar" target="_blank"><img class='svg-inject' src='/icons/lichess.svg' />  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a role="switch">
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Back to Chess</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+
+	
+
+	
+
+	
+          <small role="doc-subtitle"></small>
+	
+
+	
+          <p class="post-date">
+              
+
+              October 26, 2025
+
+              
+          </p>
+	
+
+        <ul class="post-tags">
+          
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/chess">chess</a></li>
+           
+         
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>Welcome back! I was writing a post on a chess tournament I played around a month ago, but in the end I decided to postpone it and instead focus first on what has been my journey and where I am now.</p>
+<p>This will be a very personal post. Forgive me for the drastic change of tone there will be at some point, but to talk about the last part, I also wanted to talk about my past and this was the only way I could do it.</p>
+<h2 id="a-bit-of-history">A bit of history</h2>
+<h3 id="starting">Starting</h3>
+<p>I can’t even remember when I learned to play chess (I have a very bad memory for this kind of stuff). But what I remember are the chessboards. We had a very simple one at home: small, made of wood and with no border; very light pieces, also made of wood, except for a pawn that was missing and was replaced by a very tiny one (no idea where it came from). Another chessboard was my grandpa’s, in Bulgaria: made of cardboard, inside a little white square box, barely holding together; oh, and I swear I can still smell the dust when we opened it!</p>
+<p>I started playing at the local chess club in my town, with some friends. At the time - around 9 yo I think - I was also playing soccer and playing piano, but chess always felt more magical somehow. When going to soccer I had to carry a big bag with all the clothes, shoes, gloves (yep, I was a goalkeeper, I didn&rsquo;t like to run); for piano I had to carry all the books and sheets (and a huge sense fo guilt because I didn&rsquo;t practice at home); but for chess I didn&rsquo;t need anything, we were just going there to have fun and play some games. No stress, no pressure, no ambition.</p>
+<details class="spoiler">
+  <summary>Spoiler</summary>
+  &ldquo;No ambition&rdquo; didn&rsquo;t last very long.
+</details>
+<h3 id="growing">Growing</h3>
+<p>I started playing tournaments, mainly 30&rsquo; + 0&rsquo;&rsquo;. I loved the atmosphere: the hall in silence, the tick of the clocks, the anxiety when the flag was about to fall, the excitement of winning and the frustration of losing. We all had lunch together at the venue, on a single long table full of homemade food and wine. Well, we didn&rsquo;t drink the wine, we were kids (but more importantly we had a tournament to play), but our parents did. That’s where I decided I wanted to discover more of that world.</p>
+<p>Those tournaments where valid for the qualification to the National Junior Championship and every time I wished so hard to hear my name called out between the selected. And at one point it did. I was so happy I even wrote about it in an essay at school.</p>
+<details class="spoiler">
+  <summary>Spoiler</summary>
+  I found that essay a couple of months ago between my primary school&rsquo;s books. Trust me, never read something you wrote in primary school.
+</details>
+<p>The National Championship was simply a dream: a full week absorbed in chess, with thousands of people from all over Italy there just to play. I managed to qualify for three consecutive years and every time has been a great experience - maybe the last a little bit less&hellip; I also found online the final scoreboards of the tournaments!</p>
+<ul>
+<li><strong>Courmayeur 2009:</strong> just look at some photos of the place and you will fall in love with it. On the mountains near Mont Blanc, we had beautiful weather for a week and spent a lot of time playing mini golf with a friend. <a href="https://www.torneionline.com/tornei_d.php?codice=0904014C&amp;tipo=c&amp;ord=c&amp;sen=a">This is</a> the final scoreboard in case you are curious; 129 out of 189 is not that bad I guess. I also found other people I met these years in Bologna and had no idea they were there too!</li>
+<li><strong>Terrasini 2010:</strong> search &ldquo;Città del Mare&rdquo; on Google, you might have seen that water slide on Instagram. Apart from that, the profiteroles and the granita were out of this world! Oh and the chess tournament went pretty well too: <a href="https://www.torneionline.com/tornei_d.php?codice=1004012C&amp;tipo=c&amp;ord=c&amp;sen=a">27th position</a> with 5.5/9 points. Here is where I started to have some ambition about what I wanted from chess.</li>
+<li><strong>Porretta Terme 2011:</strong> once again, look at some photos of Porretta Terme. It&rsquo;s not a place where you want to go on holiday. The hotel was terrible and we had to request a change. And this time it didn&rsquo;t go so well, compared to the previous year; 82nd place. But more imporantly, look at the top of the <a href="https://www.torneionline.com/tornei_d.php?codice=1104008C&amp;tipo=c&amp;ord=c&amp;sen=a">scoreboard</a> and compare it with the others: the top players are over 2000! And already there I felt I was falling behind my goals.</li>
+</ul>
+<h3 id="ending">Ending</h3>
+<p>I played a few more tournaments in the next couple of years, but I don&rsquo;t remember much about them, except for two.</p>
+<p>One was a tournament in a pizzeria in my town, where I went quite well and earned my title of 3N (1500 ELO)! And also won a coupon for a dinner for two at that pizzeria. Never used.</p>
+<p>The other one has been my last tournament for the next 10 years. Ok, honestly I cannot find the tournament online, so I don&rsquo;t know if this is just a reconstructed memory and all of this actually never happened; but what I remember is that I made like 1.5 points out of 7 or 9. Maybe I just retired from the tournament at some point. But that has been the last time I played chess seriously for 10 years or more: didn&rsquo;t achieve my goals, thought I was not talented enough and wanted to focus on other things like the Mathematical Olympiads - that&rsquo;s another story, but not that different overall.</p>
+<h2 id="rediscovering-the-passion">Rediscovering the passion</h2>
+<p>This part is very hard to write for me. As you can tell reading these posts, I&rsquo;m not very good with words and I will never be up to the task of describing how my feelings for the game and the whole vision of it changed and, much more imporantly, the role that a single person had in all of this. I&rsquo;ll do what I can.</p>
+<p>When I was a kid we had two coaches at the local chess club, they taught us the basic principles, some mate patterns and a bit of openings; they were both under 2000 ELO, so it was not easy for them to give us an idea of the complexity and the deepness behind the game, but they still taught me a lot and I had so much fun playing in those years thanks to them.</p>
+<p>In the 10 years of stop from chess I still kept appreciating the game; it made me fall back with memory to when I was a child and a part of me always wanted to get back to play. But I was missing something: even though the interest was there, I didn&rsquo;t feel the game was worth the effort needed to become good at it. I needed someone to show me what chess is for real.</p>
+<p>That someone finally arrived. I don&rsquo;t know what was the first video I watched from his channel, but it has been an epiphany for me. It is said that Grandmasters don&rsquo;t see what common players see when whatching a position; the world on which their mind is working is on another level of complexity. Now imagine someone who could bring that world to everyone; someone so strong to be one of the top players and at the same time so good at teaching that every newbie felt like could become a master listening to his explanations; someone who spent thousands of hours to create the best quality learning content and made it free for everyone. The more I listened to him the more I felt I wanted to dedicate my life to chess, to comprehend as much as possible of that world he was introducing to me. He made me fall in love with it, not only showing how much more than I thought there was to discover, but making me feel I could actually understand it. This is who Daniel Naroditsky has been for me.</p>
+<h2 id="start-and-stop">Start and stop</h2>
+<p>With this new passion inside, I started playing again in tournaments, gaining rating and aiming to reach 2000. This time was far different from the ingenuous approach I had when I was a kid: I really wanted to delve into the complexity of the game and make of it one of the main goals of my life. But with the passion comes the competitiveness and with the competitiveness comes the frustration of not being at the level.</p>
+<p>I started taking lessons, buying books to study and exercising on tactics. Yet my mind somehow was never focused on the game; it was focused on my dreams, on an idyllic scenario where I already know everything I need to know. I was waiting for the cut scene where all the training is skipped and the main character levels up. Needless to say that cut never came and I couldn&rsquo;t bear more of that inability to study, so I took a break since the beginning of this year.</p>
+<h2 id="now">Now</h2>
+<p>Since September I wanted to get back to chess, so I started playing some games online and finally participated in a tournament at the end of the month. I was writing a post on that, but what happened in these days made me look back at my journey and I wanted to write something about it.</p>
+<p>That guide who made me rediscover the game and gave me (and thousands of people) the privilege to have a glance at the depth of this world, died a week ago, at the age of 29. The community has already spent many words to describe what this meant for the chess world, so I will focus on what it meant for me.</p>
+<p>I already said what crucial role he had for me in these years and so many times I wished the day could have come for me to meet him and thank him personally. And now I was looking forward to follow his guide once again out of this long break. I felt lost in this week, looking for meaning in all of this. Even now, I have to take a break every sentence to put myself together and try not to be overcome by emotions.</p>
+<p>But I want to get over it. I was in a moment where I wanted to play again and it would be a disservice to all he gave me to not follow this will. I know for many of you who will read this it will look crazy and of very bad taste to cite an anime in such a situation; but those who know me know that this one is a part of of who I am and I wouldn&rsquo;t use its words lightly. So for the end of this post I will give the word to Dr. Hiriluk, hoping you will remember the situation in which he tells them and, once again, you understand I&rsquo;m doing this with the sole purpose to honor Danya&rsquo;s memory.</p>
+<blockquote>
+<p>&ldquo;When do you think people die? When they are shot through the heart by the bullet of a pistol? No. When they are ravaged by an incurable disease? No. When they are at the bottom of the sea, after they&rsquo;ve eaten a poisonous mushroom? No! When do you think it is? People die&hellip; when they are forgotten.&rdquo;</p>
+<p><em>— Dr. Hiriluk</em></p></blockquote>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+
+    
+
+    
+
+</footer>
+</body>
+</html>

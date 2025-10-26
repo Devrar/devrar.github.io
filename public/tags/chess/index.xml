@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chess on Complexity</title>
+    <link>http://localhost:1313/tags/chess/</link>
+    <description>Recent content in Chess on Complexity</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/chess/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Back to Chess</title>
+      <link>http://localhost:1313/posts/back-to-chess/</link>
+      <pubDate>Sun, 26 Oct 2025 15:12:03 +0200</pubDate>
+      <guid>http://localhost:1313/posts/back-to-chess/</guid>
+      <description>&lt;p&gt;Welcome back! I was writing a post on a chess tournament I played around a month ago, but in the end I decided to postpone it and instead focus first on what has been my journey and where I am now.&lt;/p&gt;&#xA;&lt;p&gt;This will be a very personal post. Forgive me for the drastic change of tone there will be at some point, but to talk about the last part, I also wanted to talk about my past and this was the only way I could do it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

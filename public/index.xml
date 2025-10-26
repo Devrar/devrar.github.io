@@ -6,12 +6,19 @@
     <description>Recent content on Complexity</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Sep 2025 15:43:29 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 26 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Back to Chess</title>
+      <link>http://localhost:1313/posts/back-to-chess/</link>
+      <pubDate>Sun, 26 Oct 2025 15:12:03 +0200</pubDate>
+      <guid>http://localhost:1313/posts/back-to-chess/</guid>
+      <description>&lt;p&gt;Welcome back! I was writing a post on a chess tournament I played around a month ago, but in the end I decided to postpone it and instead focus first on what has been my journey and where I am now.&lt;/p&gt;&#xA;&lt;p&gt;This will be a very personal post. Forgive me for the drastic change of tone there will be at some point, but to talk about the last part, I also wanted to talk about my past and this was the only way I could do it.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Puppet Writeup</title>
       <link>http://localhost:1313/posts/puppet-witeup/</link>
-      <pubDate>Thu, 25 Sep 2025 15:43:29 +0200</pubDate>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/puppet-witeup/</guid>
       <description>&lt;p&gt;Welcome back! This will be a series of three posts on the Uniswap challenges from &lt;a href=&#34;https://www.damnvulnerabledefi.xyz/&#34;&gt;Damn Vulnerable DeFi&lt;/a&gt;. I&amp;rsquo;ve just finished &lt;a href=&#34;https://www.damnvulnerabledefi.xyz/challenges/puppet-v3/&#34;&gt;Puppet V3&lt;/a&gt; and learned a lot about the protocol, so I thought it would be nice to write down what I understood and see if I can explain it clearly.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;You do not really understand something unless you can explain it to your grandmother.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;— Albert Einstein&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;details class=&#34;spoiler&#34;&gt;&#xA;  &lt;summary&gt;Spoiler&lt;/summary&gt;&#xA;  No, Einstein didn&amp;rsquo;t actually say that.&#xA;&lt;/details&gt;&#xA;&lt;h2 id=&#34;uniswap-very-approximate-overview&#34;&gt;Uniswap (very approximate) overview&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Disclaimer: this is not a real explanation of the protocol. If you want to understand it properly, I suggest reading the &lt;a href=&#34;https://rareskills.io/uniswap-v3-book&#34;&gt;Rare Skills Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
