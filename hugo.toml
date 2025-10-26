@@ -59,7 +59,7 @@ theme = 'gokarna'
     # listed last in the menu (rightmost)
     weight = 5
 
-    pre = "<img class='svg-inject' src='/svg/icons/lichess.svg' />"
+    pre = "<img class='svg-inject' src='/icons/lichess.svg' />"
     [[menu.main.params]]
       newPage = true
 
