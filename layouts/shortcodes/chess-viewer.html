@@ -1,0 +1,8 @@
+<ct-pgn-viewer id={{ .Get "id"}} board-size="480px" move-list-position="right" move-list-useFigurineNotation="true">
+{{ .Inner }}
+</ct-pgn-viewer>
+<style>
+    ct-pgn-viewer.ct-pgn-viewer move-list .ct-move-list-container {
+  height: {{ .Get "height" | default "300px" }};
+}
+</style>

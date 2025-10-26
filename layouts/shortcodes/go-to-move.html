@@ -1,0 +1,6 @@
+<a href="#"
+   onclick="
+   goToMove('{{ .Get "id"}}', '{{ .Get "move" }}');
+   return false;">
+  {{ .Inner | markdownify }}
+</a>
