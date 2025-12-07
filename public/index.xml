@@ -9,11 +9,18 @@
     <lastBuildDate>Sun, 07 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Civitanova Chess Tournament Round 3</title>
+      <link>http://localhost:1313/posts/civitanova-chess-tournament-round-3/</link>
+      <pubDate>Sun, 07 Dec 2025 19:45:12 +0100</pubDate>
+      <guid>http://localhost:1313/posts/civitanova-chess-tournament-round-3/</guid>
+      <description>&lt;p&gt;Welcome back! Are you ready for a crazy King&amp;rsquo;s Indian Game? This is the third round of the tournament, I&amp;rsquo;m at 2/2 on board 2 and I need a win to stay on top of the leaderboard.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-game&#34;&gt;The Game&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;m against Leonardo Renzetti, a player about my age but almost 100 rating points higher, at 2020. I&amp;rsquo;ve already analysed the game with an engine with him after we finished, but this time the vibes mean much more than machine&amp;rsquo;s evaluation.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Civitanova Chess Tournament Round 2</title>
       <link>http://localhost:1313/posts/civitanova-chess-tournament-round-2/</link>
       <pubDate>Sun, 07 Dec 2025 11:48:08 +0100</pubDate>
       <guid>http://localhost:1313/posts/civitanova-chess-tournament-round-2/</guid>
-      <description>&lt;p&gt;Welcome back! Already here for round 2? This morning it&amp;rsquo;s been a quick game, so I should manage to publish this before the third round.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-game&#34;&gt;The game&lt;/h2&gt;&#xA;&lt;p&gt;This time I was with the white pieces against Corrado Luberti, a player at his very first tournament! I talked&lt;/p&gt;&#xA;&lt;ct-pgn-viewer id=ZgotmplZ flip=true board-size=&#34;480px&#34; move-list-position=&#34;right&#34; move-list-useFigurineNotation=&#34;true&#34;&gt;&#xA;&#xA;[Event &#34;2025/12/06 - Civitanova: Turno 2&#34;]&#xA;[Date &#34;2025.12.07&#34;]&#xA;[Result &#34;1-0&#34;]&#xA;[Variant &#34;Standard&#34;]&#xA;[ECO &#34;B12&#34;]&#xA;[Opening &#34;Caro-Kann Defense: Maróczy Variation&#34;]&#xA;[StudyName &#34;2025/12/06 - Civitanova&#34;]&#xA;[ChapterName &#34;Turno 2&#34;]&#xA;[UTCDate &#34;2025.12.07&#34;]&#xA;[UTCTime &#34;10:53:16&#34;]&#xA;&#xA;1. e4 c6 2. d4 d5 3. f3 Nf6 4. e5 Nfd7 5. Bd3 c5 6. c3 Nc6 7. Ne2 Qb6 8. Bc2 e6 9. O-O Be7 (9... cxd4 10. cxd4 Ndxe5) 10. Kh1 O-O 11. f4 cxd4 12. cxd4 Nb4 13. Bb3 f6 14. Nbc3 Nb8 15. f5 fxe5 16. dxe5 Bd7 17. Nd4 Bc5 18. fxe6 Bxd4 19. Rxf8+ Kxf8 20. Qf1+ Kg8 21. Qf7+ Kh8 22. Qf8# 1-0&#xA;&#xA;&#xA;&lt;/ct-pgn-viewer&gt;&#xA;&lt;style&gt;&#xA;    ct-pgn-viewer.ct-pgn-viewer move-list .ct-move-list-container {&#xA;  height: 280px;&#xA;}&#xA;&lt;/style&gt;</description>
+      <description>&lt;p&gt;Welcome back! Already here for round 2? This morning it was a quick game, so I should manage to publish this before the third round.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-game&#34;&gt;The game&lt;/h2&gt;&#xA;&lt;p&gt;This time I had the white pieces against Corrado Luberti, a player at his very first tournament! I talked to him a little bit after the game and he confessed he doesn&amp;rsquo;t really like thinking too much at every move, but he wanted to give it a try anyway. Honestly I also wasn&amp;rsquo;t really in the mood to spend too much time, since today it is my brother&amp;rsquo;s birthday - 🥳🥳 - and we will go out for lunch - oh no, I still have only 20 minutes to write this post 😱.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Civitanova Chess Tournament Round 1</title>
