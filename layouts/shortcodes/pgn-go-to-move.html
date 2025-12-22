@@ -1,0 +1,3 @@
+{{ $id := .Get "id" }}
+{{ $move := .Get "move" }}
+<a href="#" class="pgn-go-to-move" onclick="if(window.goToPgnMove){ goToPgnMove('{{ $id }}', '{{ $move }}'); } return false;">{{ .Inner | markdownify }}</a>
