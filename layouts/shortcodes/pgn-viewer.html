@@ -28,6 +28,7 @@
 
 <div class="pgn-viewer" id="{{ $id }}" data-autoplay="{{ $autoplay }}" data-delay="{{ $delay }}" data-orientation="{{ $orientation }}" data-moves-position="{{ $movesPos }}" style="--pgn-board-size: {{ $boardSize }};">
   <div class="pgn-viewer__body">
+    <div class="pgn-viewer__meta" id="{{ $id }}-meta"></div>
     <div class="pgn-viewer__board" id="{{ $id }}-board"></div>
     <div class="pgn-viewer__panel">
       <div class="pgn-viewer__moves-row">
@@ -56,9 +57,19 @@
 .pgn-viewer.moves-pos-side .pgn-viewer__moves { display:flex; flex-direction:column; gap:8px; }
 .pgn-viewer.moves-pos-side .pgn-viewer__move-row { display:grid; grid-template-columns: auto 1fr 1fr; align-items:center; gap:6px; }
 .pgn-viewer.moves-pos-none .pgn-viewer__moves-wrapper { display:none; }
+.pgn-viewer__meta { width: min(var(--pgn-board-size, 560px), 100%); box-sizing:border-box; margin: 4px auto 0 auto; padding:8px 12px; border:1px solid rgba(0,0,0,0.08); border-radius:12px; background: linear-gradient(135deg, rgba(0,0,0,0.02), rgba(0,0,0,0)); box-shadow:0 6px 16px rgba(0,0,0,0.05); display:flex; justify-content:center; align-items:center; font-size:0.95rem; line-height:1.35; }
+.pgn-viewer__meta.is-empty { display:none; }
+.pgn-viewer__meta-line { display:flex; gap:8px; align-items:center; color:#111827; }
+.pgn-viewer__meta-line strong { color:#1f2937; }
+@media (prefers-color-scheme: dark) {
+  .pgn-viewer__meta { border-color: rgba(255,255,255,0.08); background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0)); box-shadow:0 6px 18px rgba(0,0,0,0.35); color:#e5e7eb; }
+  .pgn-viewer__meta-line strong { color:#e5e7eb; }
+}
 .pgn-viewer__board { width: min(var(--pgn-board-size, 560px), 100%); max-width: var(--pgn-board-size, 560px); margin: 0 auto; display: grid; grid-template-columns: repeat(8, 1fr); border: 1px solid rgba(0,0,0,0.25); border-radius:10px; overflow:hidden; }
 .pgn-square { aspect-ratio: 1 / 1; display:flex; align-items:center; justify-content:center; font-size: clamp(34px, 6vw, 56px); font-weight:700; text-shadow: 0 2px 4px rgba(0,0,0,0.25); }
-.pgn-piece { width: 88%; height: 88%; object-fit: contain; display:block; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.25)); }
+.pgn-piece { width: 99%; height: 99%; object-fit: contain; display:block; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.25)); }
+.pgn-square.is-last-move { box-shadow: inset 0 0 0 3px #f59e0b; }
+@media (prefers-color-scheme: dark) { .pgn-square.is-last-move { box-shadow: inset 0 0 0 3px #fbbf24; } }
 .pgn-square.light { background: linear-gradient(135deg, #f4e6c0 0%, #e8d09a 100%); }
 .pgn-square.dark { background: linear-gradient(135deg, #b07b4a 0%, #8c5d2e 100%); }
 .pgn-viewer__panel { display:flex; flex-direction:column; gap:8px; align-items:center; }
@@ -155,6 +166,7 @@ if (!window.goToPgnMove) {
   const pgnEl = document.getElementById(`${id}-pgn`);
   if (!pgnEl) return;
   const pgn = pgnEl.value.trim();
+  const metaEl = document.getElementById(`${id}-meta`);
   const boardEl = document.getElementById(`${id}-board`);
   const movesEl = document.getElementById(`${id}-moves`);
   const movesWrap = el.querySelector('.pgn-viewer__moves-wrapper');
@@ -211,6 +223,43 @@ if (!window.goToPgnMove) {
     return loadScript(localSrc).catch(() => loadScript(cdnSrc));
   }
 
+  function parseTags(text){
+    const tags = {};
+    text.split(/\r?\n/).forEach(line => {
+      const m = line.match(/^\s*\[([A-Za-z0-9_]+)\s+"(.*)"\s*\]\s*$/);
+      if (m) tags[m[1]] = m[2];
+    });
+    return tags;
+  }
+
+  function renderMeta(tags){
+    if (!metaEl) return;
+    const white = tags.White || '';
+    const black = tags.Black || '';
+    const whiteElo = tags.WhiteElo ? `(${tags.WhiteElo})` : '';
+    const blackElo = tags.BlackElo ? `(${tags.BlackElo})` : '';
+    const result = tags.Result || '';
+
+    const hasNames = white || black;
+    if (!hasNames) { metaEl.classList.add('is-empty'); metaEl.innerHTML=''; return; }
+
+    const line = document.createElement('div');
+    line.className = 'pgn-viewer__meta-line';
+    const text = [
+      [white, whiteElo].filter(Boolean).join(' '),
+      '-',
+      [black, blackElo].filter(Boolean).join(' '),
+      result ? result : ''
+    ].filter(Boolean).join(' ');
+    const strong = document.createElement('strong');
+    strong.textContent = text;
+    line.appendChild(strong);
+
+    metaEl.innerHTML = '';
+    metaEl.classList.remove('is-empty');
+    metaEl.appendChild(line);
+  }
+
   function fenToBoard(fen){
     const board=[];
     const parts=fen.split(' ')[0].split('/');
@@ -233,9 +282,14 @@ if (!window.goToPgnMove) {
     ranks.forEach((rank, rIndex) => {
       const files = flipped ? [...rank].reverse() : rank;
       files.forEach((piece, fIndex) => {
+        const origRow = flipped ? 7 - rIndex : rIndex;
+        const origFile = flipped ? 7 - fIndex : fIndex;
+        const fileChar = 'abcdefgh'[origFile];
+        const rankNum = 8 - origRow;
         const isLight = (rIndex + fIndex) % 2 === 0;
         const div=document.createElement('div');
         div.className='pgn-square '+(isLight?'light':'dark');
+        div.dataset.square = `${fileChar}${rankNum}`;
         if(piece){
           const isWhite = piece===piece.toUpperCase();
           const letter = piece.toUpperCase();
@@ -260,6 +314,7 @@ if (!window.goToPgnMove) {
     if (!window.Chess) { movesEl.textContent = 'chess.js not loaded'; return; }
     const base = new window.Chess();
     if (!base.load_pgn(pgn)) { movesEl.textContent = 'Invalid PGN'; return; }
+    renderMeta(parseTags(pgn));
     const moves = base.history({ verbose: true });
     let index=0;
 
@@ -267,8 +322,10 @@ if (!window.goToPgnMove) {
       index=Math.max(0, Math.min(target, moves.length));
       const replay = new window.Chess();
       replay.reset();
-      for(let i=0;i<index;i++){ replay.move(moves[i]); }
+      let last=null;
+      for(let i=0;i<index;i++){ last = replay.move(moves[i]); }
       renderBoard(replay.fen());
+      highlightSquares(last ? [last.from, last.to] : []);
       highlight();
     }
 
@@ -299,6 +356,13 @@ if (!window.goToPgnMove) {
       centerActive();
     }
 
+    function highlightSquares(squares){
+      const set = new Set((squares || []).filter(Boolean));
+      boardEl.querySelectorAll('.pgn-square').forEach(div => {
+        div.classList.toggle('is-last-move', set.has(div.dataset.square));
+      });
+    }
+
     movesEl.innerHTML='';
     const fullCount = Math.ceil(moves.length/2);
     for(let m=0; m<fullCount; m++){
@@ -320,7 +384,7 @@ if (!window.goToPgnMove) {
         wSpan.className='pgn-viewer__move';
         wSpan.textContent=whiteMv.san;
         wSpan.dataset.index=wIdx+1;
-        wSpan.addEventListener('click',()=>goTo(+wSpan.dataset.index));
+        wSpan.addEventListener('click',()=>{ goTo(+wSpan.dataset.index); });
         row.appendChild(wSpan);
       }
 
@@ -329,7 +393,7 @@ if (!window.goToPgnMove) {
         bSpan.className='pgn-viewer__move';
         bSpan.textContent=blackMv.san;
         bSpan.dataset.index=bIdx+1;
-        bSpan.addEventListener('click',()=>goTo(+bSpan.dataset.index));
+        bSpan.addEventListener('click',()=>{ goTo(+bSpan.dataset.index); });
         row.appendChild(bSpan);
       }
 
