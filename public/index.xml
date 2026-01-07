@@ -2,80 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Complexity</title>
-    <link>http://192.168.1.15:1313/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Complexity</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://192.168.1.15:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Usciamo Dallo Stallo X - Round 2</title>
+      <link>http://localhost:1313/posts/usciamo-dallo-stallo-x-round-2/</link>
+      <pubDate>Wed, 07 Jan 2026 15:43:18 +0100</pubDate>
+      <guid>http://localhost:1313/posts/usciamo-dallo-stallo-x-round-2/</guid>
+      <description>&lt;p&gt;Bentornatə! Alla fine non sono riuscito a scrivere i post quotidianamente; giocare due partite a tempo lungo è molto stancante e non ho trovato le energie. Però eccoci qua! Riprendiamo da dove eravamo rimasti, cioè il secondo turno del torneo.&lt;/p&gt;&#xA;&lt;h2 id=&#34;la-partita&#34;&gt;La partita&lt;/h2&gt;&#xA;&lt;p&gt;Come anticipato, nel secondo turno ho giocato da Nero contro Aldo Tricarico, un Candidato Maestro con 2029 di Elo. A fine partita ho scoperto che il suo però è Elo Italia e non Elo FIDE, il che vuol dire che non ho ricevuto punti per questa partita, cosa per cui ho rosicato un pochino.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Usciamo Dallo Stallo X - Round 1</title>
-      <link>http://192.168.1.15:1313/posts/usciamo-dallo-stallo-x-round-1/</link>
+      <link>http://localhost:1313/posts/usciamo-dallo-stallo-x-round-1/</link>
       <pubDate>Sun, 04 Jan 2026 20:39:23 +0100</pubDate>
-      <guid>http://192.168.1.15:1313/posts/usciamo-dallo-stallo-x-round-1/</guid>
+      <guid>http://localhost:1313/posts/usciamo-dallo-stallo-x-round-1/</guid>
       <description>&lt;p&gt;Bentornatə! Come promesso, eccomi qua per la prima partita del primo torneo del 2026. Il torneo è &amp;ldquo;Usciamo dello Stallo&amp;rdquo; a Falconara, arrivato alla sua decima edizione e iniziato subito dopo il primo lockdown del Covid. Posso dire? Il nome è geniale.&lt;/p&gt;&#xA;&lt;h2 id=&#34;la-partita&#34;&gt;La partita&lt;/h2&gt;&#xA;&lt;p&gt;Nel primo turno sono contro Matteo Salvi, un 2N con 1748 ELO. Purtroppo ho giocato con troppa sufficienza e sentivo di non essere al massimo della concentrazione, anche se alla fine è andata ugualmente bene. Ma vediamo come è andata la partita.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Buoni Propositi</title>
-      <link>http://192.168.1.15:1313/posts/buoni-propositi/</link>
+      <link>http://localhost:1313/posts/buoni-propositi/</link>
       <pubDate>Sat, 03 Jan 2026 18:55:33 +0100</pubDate>
-      <guid>http://192.168.1.15:1313/posts/buoni-propositi/</guid>
+      <guid>http://localhost:1313/posts/buoni-propositi/</guid>
       <description>&lt;p&gt;Welcome back! O meglio, bentornatə! Infatti, come avete potuto intuire dal titolo, mi sono stancato di scrivere i post in inglese e ho deciso di passare all&amp;rsquo;italiano. Scrivere in inglese è troppo faticoso e mi richiede molto più tempo che farlo in italiano. Quindi, dato che ho intenzione di aggiornare molto più spesso questo blog nel 2026, mi sembra sensato utilizzare la lingua che mi viene più comoda. E poi siamo onesti, non lo legge nessuno se non le poche persone a cui comunque racconto tutto dal vivo.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Civitanova Chess Tournament Round 5</title>
-      <link>http://192.168.1.15:1313/posts/civitanova-chess-tournament-round-5/</link>
+      <link>http://localhost:1313/posts/civitanova-chess-tournament-round-5/</link>
       <pubDate>Tue, 09 Dec 2025 14:09:33 +0100</pubDate>
-      <guid>http://192.168.1.15:1313/posts/civitanova-chess-tournament-round-5/</guid>
+      <guid>http://localhost:1313/posts/civitanova-chess-tournament-round-5/</guid>
       <description>&lt;p&gt;Welcome back! Yesterday I was too tired to write this post, so I&amp;rsquo;m writing it now. This is the final game of the tournament and I&amp;rsquo;m at 3/4 playing on second board and if I manage to win I guarantee a third place! However, fortunately this didn&amp;rsquo;t affect my way to play, I was only focused on playing well.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-game&#34;&gt;The game&lt;/h2&gt;&#xA;&lt;p&gt;For the final game I&amp;rsquo;m Black against Mauro Di Mantino, a 1984-rated player - and also born in 1984, how cool is that? Here it is the game:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Civitanova Chess Tournament Round 4</title>
-      <link>http://192.168.1.15:1313/posts/civitanova-chess-tournament-round-4/</link>
+      <link>http://localhost:1313/posts/civitanova-chess-tournament-round-4/</link>
       <pubDate>Mon, 08 Dec 2025 20:40:53 +0100</pubDate>
-      <guid>http://192.168.1.15:1313/posts/civitanova-chess-tournament-round-4/</guid>
+      <guid>http://localhost:1313/posts/civitanova-chess-tournament-round-4/</guid>
       <description>&lt;p&gt;Welcome back! I have to admit, writing a post for every game is not easy, but it forces me to analyse and study it, so it is definitely worth it. And I hope you are appreciating this too!&lt;/p&gt;&#xA;&lt;p&gt;Where were we? Last game was the amazing King&amp;rsquo;s Indian that unfortunately ended in a loss, so I&amp;rsquo;m at 2/3. I know it will be hard to reach the podium at this point, but all I care in the end is to play some good games.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Civitanova Chess Tournament Round 3</title>
-      <link>http://192.168.1.15:1313/posts/civitanova-chess-tournament-round-3/</link>
+      <link>http://localhost:1313/posts/civitanova-chess-tournament-round-3/</link>
       <pubDate>Sun, 07 Dec 2025 19:45:12 +0100</pubDate>
-      <guid>http://192.168.1.15:1313/posts/civitanova-chess-tournament-round-3/</guid>
+      <guid>http://localhost:1313/posts/civitanova-chess-tournament-round-3/</guid>
       <description>&lt;p&gt;Welcome back! Are you ready for a crazy King&amp;rsquo;s Indian game? This is the third round of the tournament, I&amp;rsquo;m at 2/2 on board two and I need a win to stay on top of the leaderboard.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-game&#34;&gt;The Game&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;m against Leonardo Renzetti, a player about my age but almost 100 rating points higher, at 2020 ELO. I&amp;rsquo;ve already analysed the game with an engine with him after we finished, but this time the vibes mean much more than engine&amp;rsquo;s evaluation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Civitanova Chess Tournament Round 2</title>
-      <link>http://192.168.1.15:1313/posts/civitanova-chess-tournament-round-2/</link>
+      <link>http://localhost:1313/posts/civitanova-chess-tournament-round-2/</link>
       <pubDate>Sun, 07 Dec 2025 11:48:08 +0100</pubDate>
-      <guid>http://192.168.1.15:1313/posts/civitanova-chess-tournament-round-2/</guid>
+      <guid>http://localhost:1313/posts/civitanova-chess-tournament-round-2/</guid>
       <description>&lt;p&gt;Welcome back! Already here for round 2? This morning it was a quick game, so I should manage to publish this before the third round.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-game&#34;&gt;The game&lt;/h2&gt;&#xA;&lt;p&gt;This time I had the white pieces against Corrado Luberti, a player at his very first tournament! I talked to him a little bit after the game and he confessed he doesn&amp;rsquo;t really like thinking too much at every move, but he wanted to give it a try anyway. Honestly I also wasn&amp;rsquo;t really in the mood to spend too much time, since today it is my brother&amp;rsquo;s birthday - 🥳🥳 - and we will go out for lunch - oh no, I still have only 20 minutes to write this post 😱.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Civitanova Chess Tournament Round 1</title>
-      <link>http://192.168.1.15:1313/posts/civitanova-chess-tournament-round-1/</link>
+      <link>http://localhost:1313/posts/civitanova-chess-tournament-round-1/</link>
       <pubDate>Sat, 06 Dec 2025 20:50:15 +0100</pubDate>
-      <guid>http://192.168.1.15:1313/posts/civitanova-chess-tournament-round-1/</guid>
+      <guid>http://localhost:1313/posts/civitanova-chess-tournament-round-1/</guid>
       <description>&lt;p&gt;Welcome back! I know, it&amp;rsquo;s been a long time since my last post, but finding the time to write isn&amp;rsquo;t easy. Anyway, right now I&amp;rsquo;m back home in Marche for a few days and took the opportunity to play a chess tournament in Civitanova. Actually, I also played a tournament in Recco (Liguria) a couple of weeks ago and wanted to make a post about it, but didn&amp;rsquo;t have the time. However it went very badly, so you didn&amp;rsquo;t miss anything.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Back to Chess</title>
-      <link>http://192.168.1.15:1313/posts/back-to-chess/</link>
+      <link>http://localhost:1313/posts/back-to-chess/</link>
       <pubDate>Sun, 26 Oct 2025 15:12:03 +0200</pubDate>
-      <guid>http://192.168.1.15:1313/posts/back-to-chess/</guid>
+      <guid>http://localhost:1313/posts/back-to-chess/</guid>
       <description>&lt;p&gt;Welcome back! I was writing a post on a chess tournament I played around a month ago, but in the end I decided to postpone it and instead focus first on what has been my journey and where I am now.&lt;/p&gt;&#xA;&lt;p&gt;This will be a very personal post. Forgive me for the drastic change of tone there will be at some point, but to talk about the last part, I also wanted to talk about my past and this was the only way I could do it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Puppet Writeup</title>
-      <link>http://192.168.1.15:1313/posts/puppet-witeup/</link>
+      <link>http://localhost:1313/posts/puppet-witeup/</link>
       <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.15:1313/posts/puppet-witeup/</guid>
+      <guid>http://localhost:1313/posts/puppet-witeup/</guid>
       <description>&lt;p&gt;Welcome back! This will be a series of three posts on the Uniswap challenges from &lt;a href=&#34;https://www.damnvulnerabledefi.xyz/&#34;&gt;Damn Vulnerable DeFi&lt;/a&gt;. I&amp;rsquo;ve just finished &lt;a href=&#34;https://www.damnvulnerabledefi.xyz/challenges/puppet-v3/&#34;&gt;Puppet V3&lt;/a&gt; and learned a lot about the protocol, so I thought it would be nice to write down what I understood and see if I can explain it clearly.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;You do not really understand something unless you can explain it to your grandmother.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;— Albert Einstein&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;details class=&#34;spoiler&#34;&gt;&#xA;  &lt;summary&gt;Spoiler&lt;/summary&gt;&#xA;  No, Einstein didn&amp;rsquo;t actually say that.&#xA;&lt;/details&gt;&#xA;&lt;h2 id=&#34;uniswap-very-approximate-overview&#34;&gt;Uniswap (very approximate) overview&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Disclaimer: this is not a real explanation of the protocol. If you want to understand it properly, I suggest reading the &lt;a href=&#34;https://rareskills.io/uniswap-v3-book&#34;&gt;Rare Skills Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Romance Dawn</title>
-      <link>http://192.168.1.15:1313/posts/romance-dawn/</link>
+      <link>http://localhost:1313/posts/romance-dawn/</link>
       <pubDate>Sun, 14 Sep 2025 17:25:19 +0200</pubDate>
-      <guid>http://192.168.1.15:1313/posts/romance-dawn/</guid>
+      <guid>http://localhost:1313/posts/romance-dawn/</guid>
       <description>&lt;p&gt;I hope this title will spark a memory in many of you. The dawn of an adventure is never as poetic as we want it to be: no sea monsters, no soundtrack, no open sea in front of us and no treasure to go for. The only thing that makes it worthwhile is looking back at it at the end of the journey; but for that, we&amp;rsquo;ll have to wait.&lt;/p&gt;</description>
     </item>
   </channel>
